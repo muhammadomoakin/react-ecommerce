@@ -1,7 +1,7 @@
 import "./checkout-header.css";
 import "./CheckoutPage.css";
 
-function Checkoutpage() {
+export function Checkoutpage() {
   return (
     <>
       <title>Checkout</title>
@@ -234,5 +234,3 @@ function Checkoutpage() {
     </>
   );
 }
-
-export default Checkoutpage;
