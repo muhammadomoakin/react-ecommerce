@@ -1,8 +1,28 @@
+import axios from "axios";
 import { Header } from "../components/Header";
 import { products } from "../data/products";
 
 import "./HomePage.css";
 export default function HomePage() {
+  axios.get("http://localhost:3000/api/products").then((response) => {
+    console.log(response.data);
+  });
+
+  // when you want to use fetch
+  // fetch("http://localhost:3000/api/products")
+  // .then((response)=>{
+  //   response.json().then((data)=>{
+  //     console.log(data);
+  //   })
+  // })
+
+  // another way to write the code above
+  // fetch("http://localhost:3000/api/products")
+  // .then((response)=>{
+  //   return response.json();
+  // }).then((data)=>{
+  //     console.log(data);
+  //   })
   return (
     <>
       <title>Ecom project</title>
