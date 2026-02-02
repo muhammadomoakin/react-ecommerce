@@ -1,12 +1,16 @@
 import axios from "axios";
+import { useEffect, useState } from "react";
 import { Header } from "../components/Header";
-import { products } from "../data/products";
 
 import "./HomePage.css";
 export default function HomePage() {
-  axios.get("http://localhost:3000/api/products").then((response) => {
-    console.log(response.data);
-  });
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    axios.get("http://localhost:3000/api/products").then((response) => {
+      setProducts(response.data);
+      console.log(response.data);
+    });
+  }, []);
 
   // when you want to use fetch
   // fetch("http://localhost:3000/api/products")
