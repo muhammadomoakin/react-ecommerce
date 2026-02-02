@@ -1,5 +1,6 @@
 import { Header } from "../components/Header";
 import "./CheckoutPage.css";
+import "./checkout-header.css";
 
 export function Checkoutpage() {
   return (
@@ -165,10 +166,11 @@ export function Checkoutpage() {
                   <div className="delivery-option">
                     <input
                       type="radio"
-                      checked
+                      defaultChecked
                       className="delivery-option-input"
-                      name="delivery-option-2"
+                      name="delivery-option-1"
                     />
+
                     <div>
                       <div className="delivery-option-date">
                         Wednesday, June 15
