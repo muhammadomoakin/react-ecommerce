@@ -4,7 +4,7 @@ import { Header } from "../../components/Header";
 import { ProductsGrid } from "./ProductsGrid";
 
 import "./HomePage.css";
-export default function HomePage({ cart }) {
+export default function HomePage({ cart, loadCart }) {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     const getHomeData = async () => {
@@ -34,7 +34,7 @@ export default function HomePage({ cart }) {
       <title>Ecom project</title>
       <Header cart={cart} />
       <div className="home-page">
-        <ProductsGrid products={products} />
+        <ProductsGrid products={products} loadCart={loadCart} />
       </div>
     </>
   );
