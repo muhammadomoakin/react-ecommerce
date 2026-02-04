@@ -18,11 +18,11 @@ export function Product({ product, loadCart }) {
   };
 
   return (
-    <div className="product-container">
+    <div className="product-container" data-testid="product-container">
       <div className="product-image-container">
         <img
           className="product-image"
-          data-testId="product-image"
+          data-testid="product-image"
           src={product.image}
         />
       </div>
@@ -31,7 +31,7 @@ export function Product({ product, loadCart }) {
 
       <div className="product-rating-container">
         <img
-          data-testId="product-rating-stars"
+          data-testid="product-rating-stars"
           className="product-rating-stars"
           src={`images/ratings/rating-${product.rating.stars * 10}.png`}
         />
